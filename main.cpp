@@ -1,5 +1,6 @@
 #include "coloroption.h"
 #include "coloroptionmodel.h"
+#include "optionmodel.h"
 
 #include <QGuiApplication>
 #include <qqmlengine.h>
@@ -12,7 +13,7 @@ int main(int argc, char ** argv)
 {
     QGuiApplication app(argc, argv);
 
-    ColorOptionModel model;
+    OptionModel model;
     model.addOption(ColorOption("red", "red"));
     model.addOption(ColorOption("blue", "blue"));
     model.addOption(ColorOption("yellow", "yellow"));

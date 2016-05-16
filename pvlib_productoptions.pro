@@ -6,12 +6,14 @@ SOURCES += \
     coloroption.cpp \
     main.cpp \
     coloroptionmodel.cpp \
-    sizeoption.cpp
+    sizeoption.cpp \
+    optionmodel.cpp
 
 HEADERS += \
     coloroption.h \
     coloroptionmodel.h \
-    sizeoption.h
+    sizeoption.h \
+    optionmodel.h
 
 RESOURCES += coloroptionmodel.qrc
 

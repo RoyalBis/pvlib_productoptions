@@ -1,11 +1,11 @@
-#include "coloroptionmodel.h"
+#include "optionmodel.h"
 
-ColorOptionModel::ColorOptionModel(QObject *parent)
+OptionModel::OptionModel(QObject *parent)
     : QAbstractListModel(parent)
 {
 }
 
-void ColorOptionModel::addOption(const ColorOption &option)
+void OptionModel::addOption(const ColorOption &option)
 {
     //Allows response to the insert
     beginInsertRows(QModelIndex(), rowCount(), rowCount());
@@ -13,13 +13,13 @@ void ColorOptionModel::addOption(const ColorOption &option)
     endInsertRows();
 }
 
-int ColorOptionModel::rowCount(const QModelIndex &parent) const
+int OptionModel::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
     return myColorOptions.count();
 }
 
-QVariant ColorOptionModel::data(const QModelIndex &index, int role) const
+QVariant OptionModel::data(const QModelIndex &index, int role) const
 {
     //First check if the index is out of bounds
     //if the index is out of range return an empty QVariant
@@ -39,7 +39,7 @@ QVariant ColorOptionModel::data(const QModelIndex &index, int role) const
     return QVariant();
 }
 
-QHash<int, QByteArray> ColorOptionModel::roleNames() const
+QHash<int, QByteArray> OptionModel::roleNames() const
 {
     QHash<int, QByteArray> roles;
     roles[NameRole] = "colorName";
