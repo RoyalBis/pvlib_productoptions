@@ -5,11 +5,13 @@ QT += qml quick
 SOURCES += \
     coloroption.cpp \
     main.cpp \
-    coloroptionmodel.cpp
+    coloroptionmodel.cpp \
+    sizeoption.cpp
 
 HEADERS += \
     coloroption.h \
-    coloroptionmodel.h
+    coloroptionmodel.h \
+    sizeoption.h
 
 RESOURCES += coloroptionmodel.qrc
 
